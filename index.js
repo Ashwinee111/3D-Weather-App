@@ -55,5 +55,8 @@ async function weather(city) {
 }
 
 searchBtn.addEventListener("click", () => {
+  if (searchBox.value.trim() === "") {
+    return;
+  }
   weather(searchBox.value.trim());
 });
